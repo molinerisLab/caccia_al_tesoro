@@ -115,104 +115,105 @@ EOF
 vicolo_cieco "membrana_plasmatica"
 vicolo_cieco "membrana_plasmatica/canali_ionici"
 vicolo_cieco "membrana_plasmatica/lipid_rafts"
-vicolo_cieco "membrana_plasmatica/recettori/gpcr"
 
-vicolo_cieco "citoplasma"
-vicolo_cieco "citoplasma/inclusioni"
-vicolo_cieco "citoplasma/citoscheletro"
-vicolo_cieco "citoplasma/citoscheletro/actina"
-vicolo_cieco "citoplasma/citoscheletro/microtubuli"
-vicolo_cieco "citoplasma/citoscheletro/filamenti_intermedi"
-vicolo_cieco "citoplasma/ribosomi"
-vicolo_cieco "citoplasma/ribosomi/liberi"
-vicolo_cieco "citoplasma/mitocondrio"
-vicolo_cieco "citoplasma/mitocondrio/membrana_esterna"
-vicolo_cieco "citoplasma/mitocondrio/spazio_intermembrana"
-vicolo_cieco "citoplasma/mitocondrio/membrana_interna"
-vicolo_cieco "citoplasma/mitocondrio/matrice"
-vicolo_cieco "citoplasma/mitocondrio/matrice/dna_mitocondriale"
-vicolo_cieco "citoplasma/reticolo_endoplasmatico"
-vicolo_cieco "citoplasma/reticolo_endoplasmatico/liscio"
-vicolo_cieco "citoplasma/reticolo_endoplasmatico/liscio/tubuli"
-vicolo_cieco "citoplasma/reticolo_endoplasmatico/rugoso"
-vicolo_cieco "citoplasma/apparato_golgi"
-vicolo_cieco "citoplasma/apparato_golgi/mediale"
-vicolo_cieco "citoplasma/apparato_golgi/cis"
-vicolo_cieco "citoplasma/apparato_golgi/trans"
-vicolo_cieco "citoplasma/lisosomi"
-vicolo_cieco "citoplasma/lisosomi/primari"
-vicolo_cieco "citoplasma/perossisomi"
-vicolo_cieco "citoplasma/vacuoli"
-vicolo_cieco "citoplasma/centrosoma"
-vicolo_cieco "citoplasma/centrosoma/centriolo_madre"
-vicolo_cieco "citoplasma/centrosoma/centriolo_figlio"
+# ── TAPPA 1 — membrana_plasmatica/recettori/tirosina_chinasi/ ──
+cat > "$BASE/membrana_plasmatica/recettori/tirosina_chinasi/README" << 'EOF'
+[ TAPPA 1 — Recettore tirosin-chinasico ]
 
-vicolo_cieco "nucleo"
-vicolo_cieco "nucleo/nucleolo"
-vicolo_cieco "nucleo/nucleolo/regione_fibrillare"
-vicolo_cieco "nucleo/nucleolo/regione_granulare"
-vicolo_cieco "nucleo/cromatina"
-vicolo_cieco "nucleo/cromatina/eterocromatina"
-vicolo_cieco "nucleo/membrana_nucleare"
-vicolo_cieco "nucleo/membrana_nucleare/lamina"
+Hai raggiunto il recettore tirosin-chinasico: il segnale è arrivato!
+La cascata di trasduzione attiva la trascrizione di un gene per un ormone.
 
-echo "✓ Vicoli ciechi scritti."
+La prossima tappa è dove avviene la trascrizione: la eucromatina nel nucleo.
+Vai in nucleo/cromatina/eucromatina/.
+EOF
 
-# ================================================================
-# TAPPE DEL PERCORSO CORRETTO
-# ================================================================
+# ── TAPPA 2 — nucleo/cromatina/eucromatina/ ────────────────────
+cat > "$BASE/nucleo/cromatina/eucromatina/README" << 'EOF'
+[ TAPPA 2 — Eucromatina ]
 
-# ── PARTENZA — cellula/ ──────────────────────────────────────────
-cat > "$BASE/README" << 'EOF'
+Sei nella eucromatina: qui il gene viene trascritto in mRNA!
+
+L'mRNA deve uscire dal nucleo per essere tradotto.
+La prossima tappa è nei pori nucleari: nucleo/membrana_nucleare/pori_nucleari/.
+EOF
+
+# ── TAPPA 3 — nucleo/membrana_nucleare/pori_nucleari/ ──────────
+cat > "$BASE/nucleo/membrana_nucleare/pori_nucleari/README" << 'EOF'
+[ TAPPA 3 — Pori nucleari ]
+
+L'mRNA attraversa i pori nucleari e arriva nel citoplasma.
+
+Ora deve essere tradotto, ma non da ribosomi liberi!
+Per la via secretoria, la traduzione avviene su ribosomi LEGATI al RER.
+Vai in citoplasma/ribosomi/legati/.
+EOF
+
+# ── TAPPA 4 — citoplasma/ribosomi/legati/ ──────────────────────
+cat > "$BASE/citoplasma/ribosomi/legati/README" << 'EOF'
+[ TAPPA 4 — Ribosomi legati ]
+
+Qui i ribosomi legati al RER traducono l'mRNA e iniziano a far entrare la proteina nascente nel lume del reticolo endoplasmatico rugoso.
+
+La prossima tappa è nelle cisterne del RER: citoplasma/reticolo_endoplasmatico/rugoso/cisterne/.
+EOF
+
+# ── TAPPA 5 — citoplasma/reticolo_endoplasmatico/rugoso/cisterne/ ─
+cat > "$BASE/citoplasma/reticolo_endoplasmatico/rugoso/cisterne/README" << 'EOF'
+[ TAPPA 5 — Cisterne del RER ]
+
+La proteina viene ripiegata e modificata (glicosilazione iniziale).
+
+Ora deve essere spedita all'apparato di Golgi, lato cis!
+Vai in citoplasma/apparato_golgi/cis/rete_cis/.
+EOF
+
+# ── TAPPA 6 — citoplasma/apparato_golgi/cis/rete_cis/ ──────────
+cat > "$BASE/citoplasma/apparato_golgi/cis/rete_cis/README" << 'EOF'
+[ TAPPA 6 — Rete cis del Golgi ]
+
+La proteina entra nel Golgi dal lato cis, dove subisce ulteriori modifiche.
+
+Ora attraversa il Golgi fino al lato trans, punto di smistamento finale.
+Vai in citoplasma/apparato_golgi/trans/rete_trans/.
+EOF
+
+# ── TAPPA 7 — citoplasma/apparato_golgi/trans/rete_trans/ ──────
+cat > "$BASE/citoplasma/apparato_golgi/trans/rete_trans/README" << 'EOF'
+[ TAPPA 7 — Rete trans del Golgi ]
+
+La proteina è pronta per essere confezionata in una vescicola secretoria!
+
+Vai in citoplasma/vescicole_secretorie/.
+EOF
+
+# ── TAPPA 8 — citoplasma/vescicole_secretorie/ ────────────────
+cat > "$BASE/citoplasma/vescicole_secretorie/README" << 'EOF'
+[ TAPPA 8 — Vescicola secretoria ]
+
+La vescicola si dirige verso la membrana plasmatica per fondersi e rilasciare il contenuto all'esterno.
+
+Ultima tappa: esocitosi!
+Vai in membrana_plasmatica/esocitosi/.
+EOF
+
+# ── TAPPA 9 — membrana_plasmatica/esocitosi/ (TESORO) ─────────
+cat > "$BASE/membrana_plasmatica/esocitosi/README" << 'EOF'
+[ TESORO — Esocitosi! ]
+
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║            BENVENUTO NELLA CELLULA!                              ║
+║   *** HAI SECRETO L’ORMONE! ***                                  ║
 ║                                                                  ║
-║   La tua missione: naviga tra i compartimenti cellulari          ║
-║   e trova il tesoro nascosto.                                    ║
+║   Congratulazioni, hai seguito tutta la via secretoria:           ║
 ║                                                                  ║
-║   Strumenti a disposizione:                                      ║
-║     ls         — elenca cosa c'è nella directory corrente        ║
-║     cd <path>  — spostati in un'altra directory                  ║
-║     cat README — leggi il biglietto della tappa                  ║
-║     pwd        — mostra il path assoluto di dove ti trovi        ║
+║   recettore → eucromatina → poro nucleare → ribosoma legato      ║
+║   → RER → Golgi cis → Golgi trans → vescicola → esocitosi        ║
 ║                                                                  ║
+║   Ora puoi finalmente andare a fare una pausa caffè!              ║
+║                                                                  ║
+║   [La cellula ringrazia per il servizio]                         ║
 ╚══════════════════════════════════════════════════════════════════╝
-
-Sei appena entrato nella cellula.
-Guarda cosa c'è intorno a te con 'ls'.
-
-La prima tappa si trova nella membrana plasmatica,
-tra i recettori. Ma la membrana ha più zone:
-entra prima in membrana_plasmatica/recettori/ e usa 'ls'
-per capire quale porta prendere.
 EOF
-
-# ── TAPPA 1 — membrana_plasmatica/recettori/ ────────────────────
-cat > "$BASE/membrana_plasmatica/recettori/README" << 'EOF'
-[ TAPPA 1 — Recettori di membrana ]
-
-Bene! Sei tra i recettori della membrana plasmatica.
-Usa 'ls' per vedere le famiglie disponibili.
-
-Hai due opzioni:
-
-  gpcr/              → recettori accoppiati a proteine G
-                       trasmettono il segnale via secondi messaggeri
-
-  tirosina_chinasi/  → recettori con attività enzimatica diretta
-                       fosforilano le tirosine dei substrati intracellulari
-
-La prossima tappa è nel recettore che agisce
-tramite fosforilazione diretta della tirosina.
-EOF
-
-# ── TAPPA 2 — membrana_plasmatica/recettori/tirosina_chinasi/ ───
-cat > "$BASE/membrana_plasmatica/recettori/tirosina_chinasi/README" << 'EOF'
-[ TAPPA 2 — Recettori tirosin-chinasici ]
-
-Ottimo! Il recettore è stato attivato dal ligando.
-
 Usa 'pwd' e osserva bene il path che ti viene mostrato.
 Conta i livelli che ti separano dalla radice "cellula/":
   un '..'    → recettori/
@@ -383,7 +384,7 @@ cat > "$BASE/citoplasma/lisosomi/secondari/README" << 'EOF'
 ║   → eucromatina → pori nucleari → creste mitocondriali           ║
 ║   → RER cisterne → Golgi trans → Golgi cis → lisosomi            ║
 ║                                                                  ║
-║   Hai usato:                                                      ║
+║   Hai usato:                                                     ║
 ║     ✓  ls    per esplorare le opzioni                            ║
 ║     ✓  pwd   per orientarti nel filesystem                       ║
 ║     ✓  cd    con path relativi (anche con ../../..)              ║
