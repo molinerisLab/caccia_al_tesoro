@@ -1,0 +1,18 @@
+[ TAPPA 1 — Recettore tirosin-chinasico ]
+
+Hai raggiunto EGFR, il recettore per EGF.
+
+EGF — Epidermal Growth Factor — si è legato al dominio extracellulare
+del recettore. EGFR si è attivato e ha avviato una cascata di
+trasduzione del segnale verso il nucleo.
+
+Obiettivo biologico:
+attivare la trascrizione di un gene di risposta, produrre la proteina
+corrispondente e secernerla all'esterno della cellula.
+
+La prossima tappa è dove avviene la trascrizione: la eucromatina nel nucleo.
+
+Prova a raggiungerla utilizzanto un path assoluto.
+Ti ricordo che il path assoluto è quello completo, a partire dalla radice del
+filesystem e che la cellula si trova in 
+  $BASE

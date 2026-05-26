@@ -1,0 +1,19 @@
+[ TAPPA 7 — Cisterne del RER ]
+
+Ottimo! Sei nelle cisterne del reticolo endoplasmatico rugoso.
+Qui la proteina viene ripiegata e inizia la glicosilazione.
+
+Esegui 'pwd' per confermare:
+  /Users/imoliner/prj/caccia_al_tesoro/cellula/reticolo_endoplasmatico/rugoso/cisterne
+
+Il prossimo stop è l'apparato di Golgi.
+Il Golgi ha una polarità ben precisa:
+  lato cis   → riceve le vescicole dal RER (ingresso)
+  mediale    → processing intermedio
+  lato trans → smistamento finale (uscita)
+
+Le vescicole arrivano dal RER al lato cis,
+ma tu vai direttamente al punto di smistamento finale:
+la rete_trans, dentro trans/.
+
+Costruisci il path ASSOLUTO.

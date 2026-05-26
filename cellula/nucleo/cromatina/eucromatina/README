@@ -1,0 +1,17 @@
+[ TAPPA 2 — Eucromatina ]
+
+Sei nel nucleo, nella cromatina attiva.
+La trascrizione sta avvenendo esattamente qui.
+
+Usa 'pwd' per orientarti.
+
+L'mRNA appena trascritto deve uscire dal nucleo.
+Il passaggio avviene attraverso i pori nucleari,
+che si trovano nella membrana_nucleare.
+
+membrana_nucleare è una subdirectory di nucleo,
+proprio come cromatina — sono "sorelle".
+
+Devi risalire DUE livelli e poi scendere
+in membrana_nucleare/pori_nucleari/.
+Fallo in un unico comando con path relativo.

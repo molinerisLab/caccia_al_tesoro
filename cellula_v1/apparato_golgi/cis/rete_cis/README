@@ -1,0 +1,17 @@
+[ TAPPA 9 — Rete cis del Golgi ]
+
+Perfetto! Hai attraversato il Golgi dalla rete trans alla rete cis
+usando un solo path relativo con doppio '..'.
+
+Verifica con 'pwd':
+  /Users/imoliner/prj/caccia_al_tesoro/cellula/apparato_golgi/cis/rete_cis
+
+Ultima tappa! Le proteine mal ripiegate e i materiali
+da degradare vengono inviati ai lisosomi.
+Ma non a quelli primari (ancora inattivi) —
+ai lisosomi SECONDARI, dove avviene la digestione vera.
+
+Un ultimo path ASSOLUTO per chiudere il cerchio:
+
+  cd /Users/imoliner/prj/caccia_al_tesoro/cellula/lisosomi/secondari/
+  cat README

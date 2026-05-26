@@ -1,0 +1,15 @@
+[ TAPPA 1 — Recettori di membrana ]
+
+Bene! Sei tra i recettori della membrana plasmatica.
+Usa 'ls' per vedere le famiglie disponibili.
+
+Hai due opzioni:
+
+  gpcr/              → recettori accoppiati a proteine G
+                       trasmettono il segnale via secondi messaggeri
+
+  tirosina_chinasi/  → recettori con attività enzimatica diretta
+                       fosforilano le tirosine dei substrati intracellulari
+
+La prossima tappa è nel recettore che agisce
+tramite fosforilazione diretta della tirosina.

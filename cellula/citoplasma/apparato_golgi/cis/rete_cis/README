@@ -1,0 +1,10 @@
+[ TAPPA 6 — Rete cis del Golgi ]
+
+La proteina entra nel Golgi dal lato cis, dove subisce ulteriori modifiche.
+
+Ora attraversa il Golgi fino al lato trans, punto di smistamento finale.
+rete_cis e rete_trans sono "sorelle" — si trovano alla stessa profondità
+nell'apparato_golgi.
+Cos'è più comodo per spostarsi da una all'altra? Un path relativo o
+un path assoluto?
+

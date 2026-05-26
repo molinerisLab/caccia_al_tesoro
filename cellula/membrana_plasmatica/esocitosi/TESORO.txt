@@ -1,0 +1,22 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║          *** HAI TROVATO IL TESORO! ***                          ║
+║                                                                  ║
+║   Segnale iniziale: EGF — Epidermal Growth Factor                ║
+║   Recettore attivato: EGFR, un recettore tirosin-chinasico       ║
+║                                                                  ║
+║   Hai seguito il segnale dalla membrana al nucleo,               ║
+║   hai prodotto l'mRNA, hai tradotto la proteina sul RER,         ║
+║   l'hai modificata nel Golgi e l'hai secreta per esocitosi.      ║
+║                                                                  ║
+║   La risposta cellulare è completata.                            ║
+║   La cellula è salva.                                            ║
+║                                                                  ║
+║   Competenze sbloccate:                                          ║
+║     ✓ ls   → esplorazione                                        ║
+║     ✓ cd   → navigazione                                         ║
+║     ✓ pwd  → orientamento                                        ║
+║     ✓ cat  → lettura dei file.                                   ║
+║                                                                  ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝

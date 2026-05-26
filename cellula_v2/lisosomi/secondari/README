@@ -1,0 +1,22 @@
+[ TAPPA 10 — Lisosomi secondari ]
+
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║           *** HAI TROVATO IL TESORO! ***                         ║
+║                                                                  ║
+║   Hai navigato attraverso l'intera cellula:                      ║
+║                                                                  ║
+║   membrana plasmatica → recettori → ribosomi liberi              ║
+║   → eucromatina → pori nucleari → creste mitocondriali           ║
+║   → RER cisterne → Golgi trans → Golgi cis → lisosomi            ║
+║                                                                  ║
+║   Hai usato:                                                      ║
+║     ✓  ls    per esplorare le opzioni                            ║
+║     ✓  pwd   per orientarti nel filesystem                       ║
+║     ✓  cd    con path relativi (anche con ../../..)              ║
+║     ✓  cd    con path assoluti                                   ║
+║     ✓  cat   per leggere ogni biglietto                          ║
+║                                                                  ║
+║           [ ... il premio arriva presto ... ]                    ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝

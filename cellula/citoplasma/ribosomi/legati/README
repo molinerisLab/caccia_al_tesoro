@@ -1,0 +1,24 @@
+[ TAPPA 4 — Ribosomi legati ]
+
+Qui i ribosomi legati al RER traducono l'mRNA e iniziano a far entrare
+la proteina nascente nel lume del reticolo endoplasmatico rugoso.
+
+Sei quasi a metà strada!
+
+La prossima tappa è nelle cisterne del reticolo endoplasmatico rugoso.
+Prova a raggiungerle con un path assoluto, partendo da 
+$BASE.
+
+Il tato TAB è tuo amico!
+Se inizi a scrivere il path e poi premi TAB, vedrai le opzioni disponibili
+e potrai completare più velocemente. Prova a scrivere:
+
+  cd $BASE/citoplasma/
+e poi premi TAB due volte per vedere le opzioni.
+Comincia quindi a scrivere dove vuoi andare, ad esempio:
+
+  cd $BASE/citoplasma/rib
+e poi premi TAB per completare "ribosomi", e così via.
+
+Usa spesso TAB per esplorare le opzioni e velocizzare la digitazione.
+Farai anche meno errori di battitura!

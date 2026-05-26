@@ -1,0 +1,19 @@
+[ TAPPA 2 — Recettori tirosin-chinasici ]
+
+Ottimo! Il recettore è stato attivato dal ligando.
+
+Prima di muoverti, usa 'pwd' e leggi l'output con attenzione.
+Dovresti vedere qualcosa come:
+  /Users/imoliner/prj/caccia_al_tesoro/cellula/membrana_plasmatica/recettori/tirosina_chinasi
+
+Conta i livelli che ti separano dalla radice "cellula/":
+  un '..'    → recettori/
+  due '..'   → membrana_plasmatica/
+  tre '..'   → cellula/  ← la radice
+
+Il segnale si propaga nel citoplasma. La risposta cellulare
+richiede sintesi proteica: vai ai ribosomi LIBERI nel citoplasma
+(non quelli legati al reticolo endoplasmatico!).
+
+Devi risalire di TRE livelli, poi scendere in citoplasma/ribosomi/liberi/.
+Prova a costruire il path relativo con i '..'.

@@ -1,0 +1,18 @@
+[ TAPPA 3 — Ribosomi liberi ]
+
+Perfetto! I ribosomi liberi sintetizzano proteine
+destinate al citosol e al nucleo.
+
+Esegui 'pwd' e osserva l'output con attenzione.
+Quella stringa è il path assoluto di dove ti trovi.
+La parte che termina con "cellula" è la tua BASE — scrivitela
+da qualche parte: ti servirà per costruire i path assoluti.
+
+La prossima tappa è nel nucleo: devi raggiungere la cromatina.
+Ma la cromatina ha due forme molto diverse:
+
+  eterocromatina  — condensata, silenziata, inaccessibile
+  eucromatina     — aperta, attiva, trascritta
+
+Vai con un path ASSOLUTO direttamente alla forma
+trascrizionalmente attiva, dentro nucleo/cromatina/.

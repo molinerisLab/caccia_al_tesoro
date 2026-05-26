@@ -1,0 +1,22 @@
+[ TAPPA 6 — Creste mitocondriali ]
+
+Eccellente! Sei sulle creste mitocondriali,
+sede della fosforilazione ossidativa e della sintesi di ATP.
+
+Verifica con 'pwd':
+  /Users/imoliner/prj/caccia_al_tesoro/cellula/mitocondrio/membrana_interna/creste
+
+Ora la proteina deve essere riposata e glicosilata.
+Il primo compartimento della via secretoria è il
+reticolo endoplasmatico RUGOSO (non quello liscio!).
+
+Devi uscire dal mitocondrio — sono TRE livelli sopra di te:
+  '..'       → membrana_interna/
+  '../..'    → mitocondrio/
+  '../../..' → cellula/  ← la radice
+
+Poi scendi fino alle cisterne del rugoso.
+Fallo in un unico path relativo:
+
+  cd ../../../reticolo_endoplasmatico/rugoso/cisterne/
+  cat README

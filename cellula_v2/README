@@ -1,0 +1,27 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║            BENVENUTO NELLA CELLULA!                              ║
+║                                                                  ║
+║   La tua missione: naviga tra i compartimenti cellulari          ║
+║   e trova il tesoro nascosto.                                    ║
+║                                                                  ║
+║   Strumenti a disposizione:                                      ║
+║     ls        — elenca cosa c'è nella directory corrente         ║
+║     cd <path> — spostati in un'altra directory                   ║
+║     cat README — leggi il biglietto della tappa                  ║
+║     pwd       — mostra il path assoluto di dove ti trovi         ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Sei appena entrato nella cellula.
+Guarda cosa c'è intorno a te:
+
+  ls
+
+Vedrai tutti i compartimenti disponibili. Molti sono vicoli
+ciechi — solo il percorso giusto porta al tesoro.
+
+La prima tappa si trova nella membrana plasmatica,
+tra i recettori. Ma la membrana ha più zone:
+entra prima in membrana_plasmatica/recettori/ e usa 'ls'
+per capire quale porta prendere.

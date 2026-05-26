@@ -1,0 +1,16 @@
+[ TAPPA 8 — Rete trans del Golgi ]
+
+Sei alla rete trans (TGN), il centro di smistamento del Golgi.
+Da qui le proteine vengono inviate a destinazioni diverse.
+
+Usa 'pwd' per orientarti.
+
+Ora fai il percorso inverso: vai alla rete cis,
+il punto di ingresso del Golgi.
+
+rete_cis si trova dentro cis/,
+che è alla stessa profondità di trans/ nell'apparato_golgi.
+Sono "sorelle" — stessa struttura, lati opposti.
+
+Risali DUE livelli, poi scendi nell'altra direzione.
+Fallo in un unico path relativo.
