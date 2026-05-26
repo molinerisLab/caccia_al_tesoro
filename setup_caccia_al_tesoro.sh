@@ -306,7 +306,7 @@ Ultima tappa: esocitosi!
 EOF
 
 # ── TAPPA 9 — membrana_plasmatica/esocitosi/ (TESORO) ─────────
-cat > "$BASE/membrana_plasmatica/esocitosi/README.txt" << 'EOF'
+cat > "$BASE/membrana_plasmatica/esocitosi/README" << 'EOF'
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
 ║          *** HAI TROVATO IL TESORO! ***                          ║
