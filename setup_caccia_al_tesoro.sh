@@ -31,66 +31,97 @@ fi
 # CREAZIONE DELL'ALBERO DI DIRECTORY
 # ================================================================
 
-mkdir -p \
-  "$BASE" \
-  \
-  "$BASE/membrana_plasmatica" \
-  "$BASE/membrana_plasmatica/canali_ionici" \
-  "$BASE/membrana_plasmatica/lipid_rafts" \
-  "$BASE/membrana_plasmatica/recettori" \
-  "$BASE/membrana_plasmatica/recettori/gpcr" \
-  "$BASE/membrana_plasmatica/recettori/tirosina_chinasi" \
-  "$BASE/membrana_plasmatica/esocitosi" \
-  \
-  "$BASE/citoplasma" \
-  "$BASE/citoplasma/inclusioni" \
-  "$BASE/citoplasma/vescicole_secretorie" \
-  "$BASE/citoplasma/citoscheletro" \
-  "$BASE/citoplasma/citoscheletro/actina" \
-  "$BASE/citoplasma/citoscheletro/microtubuli" \
-  "$BASE/citoplasma/citoscheletro/filamenti_intermedi" \
-  "$BASE/citoplasma/ribosomi" \
-  "$BASE/citoplasma/ribosomi/liberi" \
-  "$BASE/citoplasma/ribosomi/legati" \
-  "$BASE/citoplasma/mitocondrio" \
-  "$BASE/citoplasma/mitocondrio/membrana_esterna" \
-  "$BASE/citoplasma/mitocondrio/spazio_intermembrana" \
-  "$BASE/citoplasma/mitocondrio/membrana_interna" \
-  "$BASE/citoplasma/mitocondrio/membrana_interna/creste" \
-  "$BASE/citoplasma/mitocondrio/matrice" \
-  "$BASE/citoplasma/mitocondrio/matrice/dna_mitocondriale" \
-  "$BASE/citoplasma/reticolo_endoplasmatico" \
-  "$BASE/citoplasma/reticolo_endoplasmatico/rugoso" \
-  "$BASE/citoplasma/reticolo_endoplasmatico/rugoso/cisterne" \
-  "$BASE/citoplasma/reticolo_endoplasmatico/liscio" \
-  "$BASE/citoplasma/reticolo_endoplasmatico/liscio/tubuli" \
-  "$BASE/citoplasma/apparato_golgi" \
-  "$BASE/citoplasma/apparato_golgi/cis" \
-  "$BASE/citoplasma/apparato_golgi/cis/rete_cis" \
-  "$BASE/citoplasma/apparato_golgi/mediale" \
-  "$BASE/citoplasma/apparato_golgi/trans" \
-  "$BASE/citoplasma/apparato_golgi/trans/rete_trans" \
-  "$BASE/citoplasma/lisosomi" \
-  "$BASE/citoplasma/lisosomi/primari" \
-  "$BASE/citoplasma/lisosomi/secondari" \
-  "$BASE/citoplasma/perossisomi" \
-  "$BASE/citoplasma/vacuoli" \
-  "$BASE/citoplasma/centrosoma" \
-  "$BASE/citoplasma/centrosoma/centriolo_madre" \
-  "$BASE/citoplasma/centrosoma/centriolo_figlio" \
-  \
-  "$BASE/nucleo" \
-  "$BASE/nucleo/membrana_nucleare" \
-  "$BASE/nucleo/membrana_nucleare/pori_nucleari" \
-  "$BASE/nucleo/membrana_nucleare/lamina" \
-  "$BASE/nucleo/nucleolo" \
-  "$BASE/nucleo/nucleolo/regione_fibrillare" \
-  "$BASE/nucleo/nucleolo/regione_granulare" \
-  "$BASE/nucleo/cromatina" \
-  "$BASE/nucleo/cromatina/eterocromatina" \
+DIRS=(
+  "$BASE"
+  "$BASE/membrana_plasmatica"
+  "$BASE/membrana_plasmatica/canali_ionici"
+  "$BASE/membrana_plasmatica/lipid_rafts"
+  "$BASE/membrana_plasmatica/recettori"
+  "$BASE/membrana_plasmatica/recettori/gpcr"
+  "$BASE/membrana_plasmatica/recettori/tirosina_chinasi"
+  "$BASE/membrana_plasmatica/esocitosi"
+  "$BASE/citoplasma"
+  "$BASE/citoplasma/inclusioni"
+  "$BASE/citoplasma/vescicole_secretorie"
+  "$BASE/citoplasma/citoscheletro"
+  "$BASE/citoplasma/citoscheletro/actina"
+  "$BASE/citoplasma/citoscheletro/microtubuli"
+  "$BASE/citoplasma/citoscheletro/filamenti_intermedi"
+  "$BASE/citoplasma/ribosomi"
+  "$BASE/citoplasma/ribosomi/liberi"
+  "$BASE/citoplasma/ribosomi/legati"
+  "$BASE/citoplasma/mitocondrio"
+  "$BASE/citoplasma/mitocondrio/membrana_esterna"
+  "$BASE/citoplasma/mitocondrio/spazio_intermembrana"
+  "$BASE/citoplasma/mitocondrio/membrana_interna"
+  "$BASE/citoplasma/mitocondrio/membrana_interna/creste"
+  "$BASE/citoplasma/mitocondrio/matrice"
+  "$BASE/citoplasma/mitocondrio/matrice/dna_mitocondriale"
+  "$BASE/citoplasma/reticolo_endoplasmatico"
+  "$BASE/citoplasma/reticolo_endoplasmatico/rugoso"
+  "$BASE/citoplasma/reticolo_endoplasmatico/rugoso/cisterne"
+  "$BASE/citoplasma/reticolo_endoplasmatico/liscio"
+  "$BASE/citoplasma/reticolo_endoplasmatico/liscio/tubuli"
+  "$BASE/citoplasma/apparato_golgi"
+  "$BASE/citoplasma/apparato_golgi/cis"
+  "$BASE/citoplasma/apparato_golgi/cis/rete_cis"
+  "$BASE/citoplasma/apparato_golgi/mediale"
+  "$BASE/citoplasma/apparato_golgi/trans"
+  "$BASE/citoplasma/apparato_golgi/trans/rete_trans"
+  "$BASE/citoplasma/lisosomi"
+  "$BASE/citoplasma/lisosomi/primari"
+  "$BASE/citoplasma/lisosomi/secondari"
+  "$BASE/citoplasma/perossisomi"
+  "$BASE/citoplasma/vacuoli"
+  "$BASE/citoplasma/centrosoma"
+  "$BASE/citoplasma/centrosoma/centriolo_madre"
+  "$BASE/citoplasma/centrosoma/centriolo_figlio"
+  "$BASE/nucleo"
+  "$BASE/nucleo/membrana_nucleare"
+  "$BASE/nucleo/membrana_nucleare/pori_nucleari"
+  "$BASE/nucleo/membrana_nucleare/lamina"
+  "$BASE/nucleo/nucleolo"
+  "$BASE/nucleo/nucleolo/regione_fibrillare"
+  "$BASE/nucleo/nucleolo/regione_granulare"
+  "$BASE/nucleo/cromatina"
+  "$BASE/nucleo/cromatina/eterocromatina"
   "$BASE/nucleo/cromatina/eucromatina"
+)
+
+mkdir -p "${DIRS[@]}"
 
 echo "✓ Directory create."
+
+# ================================================================
+# VICOLI CIECHI
+# ================================================================
+
+vicolo_cieco() {
+  local dir="$1"
+  cat > "$dir/README" << 'EOF'
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║   Non sei nel posto giusto!                               ║
+║                                                           ║
+║   Se sei qui, e non sei di passaggio                      ║
+║   qualcosa è andato storto.                               ║
+║   Non scoraggiarti — fai così:                            ║
+║                                                           ║
+║     1. Digita 'pwd' per capire dove ti trovi              ║
+║     2. Torna indietro con 'cd ..'                         ║
+║     3. Rileggi il README dell'ultima tappa corretta       ║
+║     4. Se proprio ti senti persa ricomincia da            ║
+║         $BASE                                             ║
+║                                                           ║
+║  Spero che tu riesca a completare la missione in tempo!   ║ 
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+EOF
+}
+
+for D in "${DIRS[@]}"; do
+  vicolo_cieco $D
+done
 
 # ================================================================
 # README INIZIALE — MISSIONE
@@ -98,7 +129,7 @@ echo "✓ Directory create."
 
 cat > "$BASE/README" << 'EOF'
 ╔══════════════════════════════════════════════════════════════════╗
-║                      ⚠ ALLARME CELLULARE ⚠                     ║
+║                      ⚠ ALLARME CELLULARE ⚠                       ║
 ╚══════════════════════════════════════════════════════════════════╝
 
 Segnale extracellulare rilevato: EGF — Epidermal Growth Factor.
@@ -140,35 +171,16 @@ ciechi — solo il percorso giusto porta al tesoro.
 La prima tappa si trova nella membrana plasmatica,
 tra i recettori. Ma la membrana ha più zone:
 entra prima in membrana_plasmatica/recettori/ e usa 'ls'
-per capire quale porta prendere. Ricorda che EGF è un recettore
+per capire quale porta prendere. Ricorda che EGFR è un recettore
 tirosin-chinasico!
+
+Quanto pensi di essere nel posto giusto dai il comando:
+
+  cat README
+
+per leggere il biglietto della tappa, che ti darà indizi su dove andare dopo.
 EOF
 
-# ================================================================
-# VICOLI CIECHI
-# ================================================================
-
-vicolo_cieco() {
-  local dir="$1"
-  cat > "$BASE/$dir/README" << 'EOF'
-╔═══════════════════════════════════════════════════════════╗
-║                                                           ║
-║   Sei in un vicolo cieco.                                 ║
-║                                                           ║
-║   Se sei qui, qualcosa è andato storto.                   ║
-║   Non scoraggiarti — fai così:                            ║
-║                                                           ║
-║     1. Digita 'pwd' per capire dove ti trovi              ║
-║     2. Torna indietro con 'cd ..'                         ║
-║     3. Rileggi il README dell'ultima tappa corretta       ║
-║                                                           ║
-╚═══════════════════════════════════════════════════════════╝
-EOF
-}
-
-vicolo_cieco "membrana_plasmatica"
-vicolo_cieco "membrana_plasmatica/canali_ionici"
-vicolo_cieco "membrana_plasmatica/lipid_rafts"
 
 # ── TAPPA 1 — membrana_plasmatica/recettori/tirosina_chinasi/ ──
 cat > "$BASE/membrana_plasmatica/recettori/tirosina_chinasi/README" << 'EOF'
@@ -185,129 +197,16 @@ attivare la trascrizione di un gene di risposta, produrre la proteina
 corrispondente e secernerla all'esterno della cellula.
 
 La prossima tappa è dove avviene la trascrizione: la eucromatina nel nucleo.
+
+Prova a raggiungerla utilizzanto un path assoluto.
+Ti ricordo che il path assoluto è quello completo, a partire dalla radice del
+filesystem e che la cellula si trova in 
+  $BASE
 EOF
 
 # ── TAPPA 2 — nucleo/cromatina/eucromatina/ ────────────────────
 cat > "$BASE/nucleo/cromatina/eucromatina/README" << 'EOF'
 [ TAPPA 2 — Eucromatina ]
-
-Sei nella eucromatina: qui il gene viene trascritto in mRNA!
-
-L'mRNA deve uscire dal nucleo per essere tradotto.
-La prossima tappa è nei pori nucleari: nucleo/membrana_nucleare/pori_nucleari/.
-EOF
-
-# ── TAPPA 3 — nucleo/membrana_nucleare/pori_nucleari/ ──────────
-cat > "$BASE/nucleo/membrana_nucleare/pori_nucleari/README" << 'EOF'
-[ TAPPA 3 — Pori nucleari ]
-
-L'mRNA attraversa i pori nucleari e arriva nel citoplasma.
-
-Ora deve essere tradotto, ma non da ribosomi liberi!
-Per la via secretoria, la traduzione avviene su ribosomi LEGATI al RER.
-Vai in citoplasma/ribosomi/legati/.
-EOF
-
-# ── TAPPA 4 — citoplasma/ribosomi/legati/ ──────────────────────
-cat > "$BASE/citoplasma/ribosomi/legati/README" << 'EOF'
-[ TAPPA 4 — Ribosomi legati ]
-
-Qui i ribosomi legati al RER traducono l'mRNA e iniziano a far entrare la proteina nascente nel lume del reticolo endoplasmatico rugoso.
-
-La prossima tappa è nelle cisterne del RER: citoplasma/reticolo_endoplasmatico/rugoso/cisterne/.
-EOF
-
-# ── TAPPA 5 — citoplasma/reticolo_endoplasmatico/rugoso/cisterne/ ─
-cat > "$BASE/citoplasma/reticolo_endoplasmatico/rugoso/cisterne/README" << 'EOF'
-[ TAPPA 5 — Cisterne del RER ]
-
-La proteina viene ripiegata e modificata (glicosilazione iniziale).
-
-Ora deve essere spedita all'apparato di Golgi, lato cis!
-Vai in citoplasma/apparato_golgi/cis/rete_cis/.
-EOF
-
-# ── TAPPA 6 — citoplasma/apparato_golgi/cis/rete_cis/ ──────────
-cat > "$BASE/citoplasma/apparato_golgi/cis/rete_cis/README" << 'EOF'
-[ TAPPA 6 — Rete cis del Golgi ]
-
-La proteina entra nel Golgi dal lato cis, dove subisce ulteriori modifiche.
-
-Ora attraversa il Golgi fino al lato trans, punto di smistamento finale.
-Vai in citoplasma/apparato_golgi/trans/rete_trans/.
-EOF
-
-# ── TAPPA 7 — citoplasma/apparato_golgi/trans/rete_trans/ ──────
-cat > "$BASE/citoplasma/apparato_golgi/trans/rete_trans/README" << 'EOF'
-[ TAPPA 7 — Rete trans del Golgi ]
-
-La proteina è pronta per essere confezionata in una vescicola secretoria!
-
-Vai in citoplasma/vescicole_secretorie/.
-EOF
-
-# ── TAPPA 8 — citoplasma/vescicole_secretorie/ ────────────────
-cat > "$BASE/citoplasma/vescicole_secretorie/README" << 'EOF'
-[ TAPPA 8 — Vescicola secretoria ]
-
-La vescicola si dirige verso la membrana plasmatica per fondersi e rilasciare il contenuto all'esterno.
-
-Ultima tappa: esocitosi!
-Vai in membrana_plasmatica/esocitosi/.
-EOF
-
-# ── TAPPA 9 — membrana_plasmatica/esocitosi/ (TESORO) ─────────
-cat > "$BASE/membrana_plasmatica/esocitosi/TESORO.txt" << 'EOF'
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║                    *** HAI TROVATO IL TESORO! ***                ║
-║                                                                  ║
-║   Segnale iniziale: EGF — Epidermal Growth Factor                ║
-║   Recettore attivato: EGFR, un recettore tirosin-chinasico       ║
-║                                                                  ║
-║   Hai seguito il segnale dalla membrana al nucleo,               ║
-║   hai prodotto l'mRNA, hai tradotto la proteina sul RER,         ║
-║   l'hai modificata nel Golgi e l'hai secreta per esocitosi.      ║
-║                                                                  ║
-║   La risposta cellulare è completata.                            ║
-║   La cellula è salva.                                            ║
-║                                                                  ║
-║   Competenze sbloccate:                                          ║
-║     ✓ ls   → esplorazione                                        ║
-║     ✓ cd   → navigazione                                         ║
-║     ✓ pwd  → orientamento                                        ║
-║     ✓ cat  → lettura degli indizi                                ║
-║                                                                  ║
-║           [ EXPLORER LEVEL UNLOCKED ]                            ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-EOF
-
-# ── TAPPA 3 — citoplasma/ribosomi/liberi/ ───────────────────────
-cat > "$BASE/citoplasma/ribosomi/liberi/README" << EOF
-[ TAPPA 3 — Ribosomi liberi ]
-
-Perfetto! I ribosomi liberi sintetizzano proteine
-destinate al citosol e al nucleo.
-
-Esegui 'pwd' e osserva l'output con attenzione.
-Quella stringa è il path assoluto di dove ti trovi.
-La parte che termina con "cellula" è la tua BASE — scrivitela
-da qualche parte: ti servirà per costruire i path assoluti.
-
-La prossima tappa è nel nucleo: devi raggiungere la cromatina.
-Ma la cromatina ha due forme molto diverse:
-
-  eterocromatina  — condensata, silenziata, inaccessibile
-  eucromatina     — aperta, attiva, trascritta
-
-Vai con un path ASSOLUTO direttamente alla forma
-trascrizionalmente attiva, dentro nucleo/cromatina/.
-EOF
-
-# ── TAPPA 4 — nucleo/cromatina/eucromatina/ ─────────────────────
-cat > "$BASE/nucleo/cromatina/eucromatina/README" << 'EOF'
-[ TAPPA 4 — Eucromatina ]
 
 Sei nel nucleo, nella cromatina attiva.
 La trascrizione sta avvenendo esattamente qui.
@@ -323,134 +222,115 @@ proprio come cromatina — sono "sorelle".
 
 Devi risalire DUE livelli e poi scendere
 in membrana_nucleare/pori_nucleari/.
-Fallo in un unico comando relativo.
+Fallo in un unico comando con path relativo.
 EOF
 
-# ── TAPPA 5 — nucleo/membrana_nucleare/pori_nucleari/ ───────────
+# ── TAPPA 3 — nucleo/membrana_nucleare/pori_nucleari/ ──────────
 cat > "$BASE/nucleo/membrana_nucleare/pori_nucleari/README" << 'EOF'
-[ TAPPA 5 — Pori nucleari ]
+[ TAPPA 3 — Pori nucleari ]
 
-L'mRNA ha attraversato il poro nucleare ed è nel citoplasma.
-Sei a metà strada.
+L'mRNA attraversa i pori nucleari e arriva nel citoplasma.
 
-Usa 'pwd' per orientarti.
-
-La cellula ha bisogno di energia per proseguire.
-Dove viene prodotta l'ATP per la fosforilazione ossidativa?
-
-Nel mitocondrio — ma non in tutta la struttura.
-La catena di trasporto degli elettroni si trova sulla
-membrana interna, nelle sue invaginazioni: le CRESTE.
-
-Attenzione: il mitocondrio non è più al primo livello
-della cellula. Rifletti su dove si trova prima di
-costruire il path assoluto.
+Ora deve essere tradotto, ma non da ribosomi liberi!
+Per la via secretoria, la traduzione avviene su ribosomi LEGATI al
+rerticolo endoplasmatico.
 EOF
 
-# ── TAPPA 6 — citoplasma/mitocondrio/membrana_interna/creste/ ───
-cat > "$BASE/citoplasma/mitocondrio/membrana_interna/creste/README" << 'EOF'
-[ TAPPA 6 — Creste mitocondriali ]
+# ── TAPPA 4 — citoplasma/ribosomi/legati/ ──────────────────────
+cat > "$BASE/citoplasma/ribosomi/legati/README" << 'EOF'
+[ TAPPA 4 — Ribosomi legati ]
 
-Eccellente! Sei sulle creste mitocondriali,
-sede della fosforilazione ossidativa e della sintesi di ATP.
+Qui i ribosomi legati al RER traducono l'mRNA e iniziano a far entrare
+la proteina nascente nel lume del reticolo endoplasmatico rugoso.
 
-Usa 'pwd' per orientarti.
+Sei quasi a metà strada!
 
-Ora la proteina deve essere ripiegata e glicosilata.
-Il primo compartimento della via secretoria è il
-reticolo endoplasmatico RUGOSO (non quello liscio!).
+La prossima tappa è nelle cisterne del reticolo endoplasmatico rugoso.
+Prova a raggiungerle con un path assoluto, partendo da 
+$BASE.
 
-Sei a TRE livelli di profondità nel mitocondrio.
-Rifletti su dove ti trovi rispetto al citoplasma,
-poi costruisci un path relativo che scenda
-fino alle cisterne del rugoso.
+Il tato TAB è tuo amico!
+Se inizi a scrivere il path e poi premi TAB, vedrai le opzioni disponibili
+e potrai completare più velocemente. Prova a scrivere:
+
+  cd $BASE/citoplasma/
+e poi premi TAB due volte per vedere le opzioni.
+Comincia quindi a scrivere dove vuoi andare, ad esempio:
+
+  cd $BASE/citoplasma/rib
+e poi premi TAB per completare "ribosomi", e così via.
+
+Usa spesso TAB per esplorare le opzioni e velocizzare la digitazione.
+Farai anche meno errori di battitura!
 EOF
 
-# ── TAPPA 7 — citoplasma/reticolo_endoplasmatico/rugoso/cisterne/
+# ── TAPPA 5 — citoplasma/reticolo_endoplasmatico/rugoso/cisterne/ ─
 cat > "$BASE/citoplasma/reticolo_endoplasmatico/rugoso/cisterne/README" << 'EOF'
-[ TAPPA 7 — Cisterne del RER ]
+[ TAPPA 5 — Cisterne del RER ]
 
-Ottimo! Sei nelle cisterne del reticolo endoplasmatico rugoso.
-Qui la proteina viene ripiegata e inizia la glicosilazione.
+La proteina viene ripiegata e modificata (glicosilazione iniziale).
 
-Usa 'pwd' per orientarti.
-
-Il prossimo stop è l'apparato di Golgi.
-Il Golgi ha una polarità ben precisa:
-  lato cis   → riceve le vescicole dal RER (ingresso)
-  mediale    → processing intermedio
-  lato trans → smistamento finale (uscita)
-
-Le vescicole arrivano dal RER al lato cis,
-ma tu vai direttamente al punto di smistamento finale:
-la rete_trans, dentro trans/.
-
-Costruisci il path ASSOLUTO.
+Ora deve essere spedita all'apparato di Golgi, rete cis!
 EOF
 
-# ── TAPPA 8 — citoplasma/apparato_golgi/trans/rete_trans/ ───────
-cat > "$BASE/citoplasma/apparato_golgi/trans/rete_trans/README" << 'EOF'
-[ TAPPA 8 — Rete trans del Golgi ]
-
-Sei alla rete trans (TGN), il centro di smistamento del Golgi.
-Da qui le proteine vengono inviate a destinazioni diverse.
-
-Usa 'pwd' per orientarti.
-
-Ora fai il percorso inverso: vai alla rete cis,
-il punto di ingresso del Golgi.
-
-rete_cis si trova dentro cis/,
-che è alla stessa profondità di trans/ nell'apparato_golgi.
-Sono "sorelle" — stessa struttura, lati opposti.
-
-Risali DUE livelli, poi scendi nell'altra direzione.
-Fallo in un unico path relativo.
-EOF
-
-# ── TAPPA 9 — citoplasma/apparato_golgi/cis/rete_cis/ ───────────
+# ── TAPPA 6 — citoplasma/apparato_golgi/cis/rete_cis/ ──────────
 cat > "$BASE/citoplasma/apparato_golgi/cis/rete_cis/README" << 'EOF'
-[ TAPPA 9 — Rete cis del Golgi ]
+[ TAPPA 6 — Rete cis del Golgi ]
 
-Perfetto! Hai attraversato il Golgi dalla rete trans alla rete cis
-usando un solo path relativo con doppio '..'.
+La proteina entra nel Golgi dal lato cis, dove subisce ulteriori modifiche.
 
-Usa 'pwd' per orientarti.
+Ora attraversa il Golgi fino al lato trans, punto di smistamento finale.
+rete_cis e rete_trans sono "sorelle" — si trovano alla stessa profondità
+nell'apparato_golgi.
+Cos'è più comodo per spostarsi da una all'altra? Un path relativo o
+un path assoluto?
 
-Ultima tappa! Le proteine e i materiali da degradare
-vengono inviati ai lisosomi.
-Ma non a quelli primari (ancora inattivi) —
-ai lisosomi SECONDARI, dove avviene la digestione vera.
-
-Costruisci il path ASSOLUTO per l'ultima tappa.
 EOF
 
-# ── TAPPA 10 — citoplasma/lisosomi/secondari/ (TESORO) ──────────
-cat > "$BASE/citoplasma/lisosomi/secondari/TESORO.txt" << 'EOF'
+# ── TAPPA 7 — citoplasma/apparato_golgi/trans/rete_trans/ ──────
+cat > "$BASE/citoplasma/apparato_golgi/trans/rete_trans/README" << 'EOF'
+[ TAPPA 7 — Rete trans del Golgi ]
+
+La proteina è pronta per essere confezionata in una vescicola secretoria!
+
+La trovi nella directori 'citoplasma'.
+EOF
+
+# ── TAPPA 8 — citoplasma/vescicole_secretorie/ ────────────────
+cat > "$BASE/citoplasma/vescicole_secretorie/README" << 'EOF'
+[ TAPPA 8 — Vescicola secretoria ]
+
+La vescicola si dirige verso la membrana plasmatica per fondersi e rilasciare il contenuto all'esterno.
+
+Ultima tappa: esocitosi!
+EOF
+
+# ── TAPPA 9 — membrana_plasmatica/esocitosi/ (TESORO) ─────────
+cat > "$BASE/membrana_plasmatica/esocitosi/TESORO.txt" << 'EOF'
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║                    *** HAI TROVATO IL TESORO! ***                ║
+║          *** HAI TROVATO IL TESORO! ***                          ║
 ║                                                                  ║
 ║   Segnale iniziale: EGF — Epidermal Growth Factor                ║
 ║   Recettore attivato: EGFR, un recettore tirosin-chinasico       ║
 ║                                                                  ║
-║   Hai seguito una cascata di segnalazione cellulare:             ║
-║                                                                  ║
-║   membrana plasmatica → recettore → nucleo → mRNA                ║
-║   → ribosomi → RER → Golgi → destinazione finale                 ║
-║                                                                  ║
-║   Hai usato:                                                     ║
-║     ✓ ls    per esplorare le opzioni                             ║
-║     ✓ pwd   per orientarti nel filesystem                        ║
-║     ✓ cd    con path relativi e assoluti                         ║
-║     ✓ cat   per leggere ogni indizio                             ║
+║   Hai seguito il segnale dalla membrana al nucleo,               ║
+║   hai prodotto l'mRNA, hai tradotto la proteina sul RER,         ║
+║   l'hai modificata nel Golgi e l'hai secreta per esocitosi.      ║
 ║                                                                  ║
 ║   La risposta cellulare è completata.                            ║
 ║   La cellula è salva.                                            ║
 ║                                                                  ║
+║   Competenze sbloccate:                                          ║
+║     ✓ ls   → esplorazione                                        ║
+║     ✓ cd   → navigazione                                         ║
+║     ✓ pwd  → orientamento                                        ║
+║     ✓ cat  → lettura dei file.                                   ║
+║                                                                  ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 EOF
+
 
 echo "✓ Biglietti delle tappe scritti."
 echo ""
