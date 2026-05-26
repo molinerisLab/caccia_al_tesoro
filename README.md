@@ -17,7 +17,7 @@ cellula/
     ├── ribosomi/legati        ← traduzione per la via secretoria
     ├── reticolo_endoplasmatico/rugoso/
     ├── apparato_golgi/       ← con polarità cis → trans rispettata
-    ├── mitocondrio/          ← sì, dentro citoplasma. È biologia, non opinione
+    ├── mitocondrio/          ← sì, dentro citoplasma...
     └── lisosomi/
         ├── primari/          ← vicolo cieco
         └── secondari/        ← tesoro
