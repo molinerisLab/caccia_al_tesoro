@@ -111,9 +111,14 @@ Il recettore è stato attivato.
 La cascata di segnalazione è iniziata.
 
 Se il segnale raggiungerà il nucleo, verrà trascritto un gene per
-una proteina di risposta. L'mRNA dovrà uscire dal nucleo, essere
-tradotto sui ribosomi legati al reticolo endoplasmatico rugoso,
-modificato nel Golgi e infine secreto all'esterno della cellula.
+una proteina di risposta. 
+Si tratta di secernere IL-8, chiamata anche CXCL8, una chemochina
+che aiuta a richiamare cellule immunitarie nella zona danneggiata.
+
+L'mRNA dovrà uscire dal nucleo, essere tradotto sui ribosomi 
+legati al reticolo endoplasmatico rugoso, la proteina dovrà 
+essere modificata nel Golgi e infine secreta all'esterno della
+cellula.
 
 La tua missione:
 seguire il percorso del segnale e completare la via secretoria.
@@ -124,8 +129,19 @@ Comandi utili:
   pwd  → scopri dove ti trovi
   cat  → leggi i README
 
-Prima tappa:
-vai al recettore tirosin-chinasico nella membrana plasmatica.
+Sei appena entrato nella cellula.
+Guarda cosa c'è intorno a te:
+
+  ls
+
+Vedrai tutti i compartimenti disponibili. Molti sono vicoli
+ciechi — solo il percorso giusto porta al tesoro.
+
+La prima tappa si trova nella membrana plasmatica,
+tra i recettori. Ma la membrana ha più zone:
+entra prima in membrana_plasmatica/recettori/ e usa 'ls'
+per capire quale porta prendere. Ricorda che EGF è un recettore
+tirosin-chinasico!
 EOF
 
 # ================================================================
@@ -169,7 +185,6 @@ attivare la trascrizione di un gene di risposta, produrre la proteina
 corrispondente e secernerla all'esterno della cellula.
 
 La prossima tappa è dove avviene la trascrizione: la eucromatina nel nucleo.
-Vai in nucleo/cromatina/eucromatina/.
 EOF
 
 # ── TAPPA 2 — nucleo/cromatina/eucromatina/ ────────────────────
@@ -425,7 +440,7 @@ cat > "$BASE/citoplasma/lisosomi/secondari/TESORO.txt" << 'EOF'
 ║   → ribosomi → RER → Golgi → destinazione finale                 ║
 ║                                                                  ║
 ║   Hai usato:                                                     ║
-║     ✓ ls    per esplorare le opzioni                            ║
+║     ✓ ls    per esplorare le opzioni                             ║
 ║     ✓ pwd   per orientarti nel filesystem                        ║
 ║     ✓ cd    con path relativi e assoluti                         ║
 ║     ✓ cat   per leggere ogni indizio                             ║
@@ -433,7 +448,6 @@ cat > "$BASE/citoplasma/lisosomi/secondari/TESORO.txt" << 'EOF'
 ║   La risposta cellulare è completata.                            ║
 ║   La cellula è salva.                                            ║
 ║                                                                  ║
-║           [ EXPLORER LEVEL UNLOCKED ]                            ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 EOF
