@@ -1,6 +1,6 @@
 # 🧬 Caccia al Tesoro Cellulare
 
-> *Un corso di biologia molecolare mascherato da videogioco anni '90.*
+> *Un mini-corso su come navigare il filesystem mascherato da videogioco anni '90 per biologhe/i.*
 
 ## Di cosa si tratta
 
