@@ -40,9 +40,11 @@ mkdir -p \
   "$BASE/membrana_plasmatica/recettori" \
   "$BASE/membrana_plasmatica/recettori/gpcr" \
   "$BASE/membrana_plasmatica/recettori/tirosina_chinasi" \
+  "$BASE/membrana_plasmatica/esocitosi" \
   \
   "$BASE/citoplasma" \
   "$BASE/citoplasma/inclusioni" \
+  "$BASE/citoplasma/vescicole_secretorie" \
   "$BASE/citoplasma/citoscheletro" \
   "$BASE/citoplasma/citoscheletro/actina" \
   "$BASE/citoplasma/citoscheletro/microtubuli" \
@@ -91,6 +93,42 @@ mkdir -p \
 echo "✓ Directory create."
 
 # ================================================================
+# README INIZIALE — MISSIONE
+# ================================================================
+
+cat > "$BASE/README" << 'EOF'
+╔══════════════════════════════════════════════════════════════════╗
+║                      ⚠ ALLARME CELLULARE ⚠                     ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Segnale extracellulare rilevato: EGF — Epidermal Growth Factor.
+
+L'ambiente esterno comunica che è necessario attivare rapidamente
+una risposta di crescita e riparazione. Una molecola di EGF si è
+legata a un recettore tirosin-chinasico sulla membrana plasmatica.
+
+Il recettore è stato attivato.
+La cascata di segnalazione è iniziata.
+
+Se il segnale raggiungerà il nucleo, verrà trascritto un gene per
+una proteina di risposta. L'mRNA dovrà uscire dal nucleo, essere
+tradotto sui ribosomi legati al reticolo endoplasmatico rugoso,
+modificato nel Golgi e infine secreto all'esterno della cellula.
+
+La tua missione:
+seguire il percorso del segnale e completare la via secretoria.
+
+Comandi utili:
+  ls   → esplora le directory
+  cd   → spostati nel filesystem
+  pwd  → scopri dove ti trovi
+  cat  → leggi i README
+
+Prima tappa:
+vai al recettore tirosin-chinasico nella membrana plasmatica.
+EOF
+
+# ================================================================
 # VICOLI CIECHI
 # ================================================================
 
@@ -120,8 +158,15 @@ vicolo_cieco "membrana_plasmatica/lipid_rafts"
 cat > "$BASE/membrana_plasmatica/recettori/tirosina_chinasi/README" << 'EOF'
 [ TAPPA 1 — Recettore tirosin-chinasico ]
 
-Hai raggiunto il recettore tirosin-chinasico: il segnale è arrivato!
-La cascata di trasduzione attiva la trascrizione di un gene per un ormone.
+Hai raggiunto EGFR, il recettore per EGF.
+
+EGF — Epidermal Growth Factor — si è legato al dominio extracellulare
+del recettore. EGFR si è attivato e ha avviato una cascata di
+trasduzione del segnale verso il nucleo.
+
+Obiettivo biologico:
+attivare la trascrizione di un gene di risposta, produrre la proteina
+corrispondente e secernerla all'esterno della cellula.
 
 La prossima tappa è dove avviene la trascrizione: la eucromatina nel nucleo.
 Vai in nucleo/cromatina/eucromatina/.
@@ -197,35 +242,30 @@ Vai in membrana_plasmatica/esocitosi/.
 EOF
 
 # ── TAPPA 9 — membrana_plasmatica/esocitosi/ (TESORO) ─────────
-cat > "$BASE/membrana_plasmatica/esocitosi/README" << 'EOF'
-[ TESORO — Esocitosi! ]
-
+cat > "$BASE/membrana_plasmatica/esocitosi/TESORO.txt" << 'EOF'
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║   *** HAI SECRETO L’ORMONE! ***                                  ║
+║                    *** HAI TROVATO IL TESORO! ***                ║
 ║                                                                  ║
-║   Congratulazioni, hai seguito tutta la via secretoria:           ║
+║   Segnale iniziale: EGF — Epidermal Growth Factor                ║
+║   Recettore attivato: EGFR, un recettore tirosin-chinasico       ║
 ║                                                                  ║
-║   recettore → eucromatina → poro nucleare → ribosoma legato      ║
-║   → RER → Golgi cis → Golgi trans → vescicola → esocitosi        ║
+║   Hai seguito il segnale dalla membrana al nucleo,               ║
+║   hai prodotto l'mRNA, hai tradotto la proteina sul RER,         ║
+║   l'hai modificata nel Golgi e l'hai secreta per esocitosi.      ║
 ║                                                                  ║
-║   Ora puoi finalmente andare a fare una pausa caffè!              ║
+║   La risposta cellulare è completata.                            ║
+║   La cellula è salva.                                            ║
 ║                                                                  ║
-║   [La cellula ringrazia per il servizio]                         ║
+║   Competenze sbloccate:                                          ║
+║     ✓ ls   → esplorazione                                        ║
+║     ✓ cd   → navigazione                                         ║
+║     ✓ pwd  → orientamento                                        ║
+║     ✓ cat  → lettura degli indizi                                ║
+║                                                                  ║
+║           [ EXPLORER LEVEL UNLOCKED ]                            ║
+║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
-EOF
-Usa 'pwd' e osserva bene il path che ti viene mostrato.
-Conta i livelli che ti separano dalla radice "cellula/":
-  un '..'    → recettori/
-  due '..'   → membrana_plasmatica/
-  tre '..'   → cellula/  ← la radice
-
-Il segnale si propaga nel citoplasma. La risposta cellulare
-richiede sintesi proteica: vai ai ribosomi LIBERI nel citoplasma
-(non quelli legati al reticolo endoplasmatico!).
-
-Devi risalire di TRE livelli, poi scendere in citoplasma/ribosomi/liberi/.
-Prova a costruire il path relativo con i '..'.
 EOF
 
 # ── TAPPA 3 — citoplasma/ribosomi/liberi/ ───────────────────────
@@ -371,27 +411,29 @@ Costruisci il path ASSOLUTO per l'ultima tappa.
 EOF
 
 # ── TAPPA 10 — citoplasma/lisosomi/secondari/ (TESORO) ──────────
-cat > "$BASE/citoplasma/lisosomi/secondari/README" << 'EOF'
-[ TAPPA 10 — Lisosomi secondari ]
-
+cat > "$BASE/citoplasma/lisosomi/secondari/TESORO.txt" << 'EOF'
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║           *** HAI TROVATO IL TESORO! ***                         ║
+║                    *** HAI TROVATO IL TESORO! ***                ║
 ║                                                                  ║
-║   Hai navigato attraverso l'intera cellula:                      ║
+║   Segnale iniziale: EGF — Epidermal Growth Factor                ║
+║   Recettore attivato: EGFR, un recettore tirosin-chinasico       ║
 ║                                                                  ║
-║   membrana plasmatica → recettori → ribosomi liberi              ║
-║   → eucromatina → pori nucleari → creste mitocondriali           ║
-║   → RER cisterne → Golgi trans → Golgi cis → lisosomi            ║
+║   Hai seguito una cascata di segnalazione cellulare:             ║
+║                                                                  ║
+║   membrana plasmatica → recettore → nucleo → mRNA                ║
+║   → ribosomi → RER → Golgi → destinazione finale                 ║
 ║                                                                  ║
 ║   Hai usato:                                                     ║
-║     ✓  ls    per esplorare le opzioni                            ║
-║     ✓  pwd   per orientarti nel filesystem                       ║
-║     ✓  cd    con path relativi (anche con ../../..)              ║
-║     ✓  cd    con path assoluti                                   ║
-║     ✓  cat   per leggere ogni biglietto                          ║
+║     ✓ ls    per esplorare le opzioni                            ║
+║     ✓ pwd   per orientarti nel filesystem                        ║
+║     ✓ cd    con path relativi e assoluti                         ║
+║     ✓ cat   per leggere ogni indizio                             ║
 ║                                                                  ║
-║           [ ... il premio arriva presto ... ]                    ║
+║   La risposta cellulare è completata.                            ║
+║   La cellula è salva.                                            ║
+║                                                                  ║
+║           [ EXPLORER LEVEL UNLOCKED ]                            ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 EOF
@@ -404,6 +446,8 @@ echo ""
 echo " Per far partire gli studenti:"
 echo ""
 echo "   cd $BASE"
+echo "   cat README"
+echo "   cd membrana_plasmatica/recettori/tirosina_chinasi"
 echo "   cat README"
 echo ""
 echo " Per resettare e rigenerare da zero:"
