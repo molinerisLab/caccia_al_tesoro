@@ -183,7 +183,7 @@ EOF
 
 
 # ── TAPPA 1 — membrana_plasmatica/recettori/tirosina_chinasi/ ──
-cat > "$BASE/membrana_plasmatica/recettori/tirosina_chinasi/README" << 'EOF'
+cat > "$BASE/membrana_plasmatica/recettori/tirosina_chinasi/README" << EOF
 [ TAPPA 1 — Recettore tirosin-chinasico ]
 
 Hai raggiunto EGFR, il recettore per EGF.
@@ -223,6 +223,8 @@ proprio come cromatina — sono "sorelle".
 Devi risalire DUE livelli e poi scendere
 in membrana_nucleare/pori_nucleari/.
 Fallo in un unico comando con path relativo.
+Ricorda che puoi scrivere più di un ../ di fila,
+per esempio cd ../../ ti porta indietro di due livelli
 EOF
 
 # ── TAPPA 3 — nucleo/membrana_nucleare/pori_nucleari/ ──────────
